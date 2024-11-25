@@ -1,0 +1,75 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f2f2e6;
+    color: #333;
+    text-align: center;
+}
+
+/* Container for confirmation */
+#confirmation-container {
+    max-width: 600px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading */
+h1 {
+    font-size: 24px;
+    color: #e74c3c;  /* Red color */
+    margin-bottom: 20px;
+}
+
+/* Message text */
+p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+/* Styling for the buttons */
+.action-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+button#confirm-delete-btn {
+    background-color: #e74c3c; /* Red button */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button#confirm-delete-btn:hover {
+    background-color: #c0392b;
+}
+
+a#cancel-btn {
+    text-decoration: none;
+    background-color: #bdc3c7; /* Neutral grey */
+    color: #333;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+a#cancel-btn:hover {
+    background-color: #95a5a6;
+}
