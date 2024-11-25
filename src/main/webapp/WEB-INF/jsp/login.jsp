@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %> <!-- Added JSTL taglib declaration -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -22,9 +23,11 @@
         <form:input type="password" path="password" id="password" placeholder="Type your password here" required="true"/>
         <form:errors path="password" cssClass="error" />
 
-        <!-- Displaying the error message passed from the controller -->
-        <c:if test="${not empty error}">
-            <div class="error-message">${error}</div>
+        <!-- Displaying the success message passed from the controller -->
+        <c:if test="${not empty message}">
+            <div class="alert alert-success">
+                ${message}
+            </div>
         </c:if>
 
         <button type="submit" id="submit">Login</button>

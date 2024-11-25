@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
-<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -12,8 +12,15 @@
 </head>
 <body>
     <h1 id="title">Register</h1>
+    
+    <!-- Display success message -->
+    <c:if test="${not empty message}">
+        <div class="success-message">
+            ${message}
+        </div>
+    </c:if>
 
-    <!-- Use the correct modelAttribute, i.e., 'user' -->
+    <!-- Registration Form -->
     <form:form action="/register" method="post" id="form" modelAttribute="user">
         <label for="username">Username</label>
         <form:input type="text" path="username" id="username" placeholder="Type your username here" required="true"/>

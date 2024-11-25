@@ -7,6 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.validation.BindingResult;
 
@@ -25,7 +26,7 @@ public class UserController {
 
     // Handle registration
     @PostMapping("/register")
-    public String registerUser(@ModelAttribute("user") User user, BindingResult result, Model model) {
+    public String registerUser(@ModelAttribute("user") User user, BindingResult result, Model model, RedirectAttributes redirectAttributes) {
         // Validate username
         if (user.getUsername() == null || user.getUsername().trim().isEmpty() || user.getUsername().contains(" ") || user.getUsername().length() < 3) {
             result.rejectValue("username", "error.username", "Username must be at least 3 characters and cannot contain spaces!");
@@ -44,11 +45,16 @@ public class UserController {
 
         // Register the user
         String resultMessage = userService.registerUser(user.getUsername(), user.getPassword());
+
         if (resultMessage.equals("Registration successful!")) {
-            model.addAttribute("message", "Account registration successful. You may now log in.");
-            return "login"; // Redirect to login page after successful registration
+            // Use RedirectAttributes to pass message on redirect
+            redirectAttributes.addFlashAttribute("message", "Account registration successful. You may now log in.");
+            return "redirect:/login"; // Redirect to login page after successful registration
         } else {
-            model.addAttribute("error", resultMessage);
+            // Check if the error is "Username already exists!" and reject the value
+            if (resultMessage.equals("Username already exists!")) {
+                result.rejectValue("username", "error.username", "Username already exists!");
+            }
             return "register"; // Stay on the registration page if there was an error
         }
     }

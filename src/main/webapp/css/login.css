@@ -96,6 +96,28 @@ form .error {
   border-radius: 5px;
 }
 
+/* Styles for the success message */
+.alert {
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+    font-size: 14px; /* Reduced font size */
+    font-weight: bold;
+    color: #fff; /* White text color for better contrast */
+    text-align: center;
+}
+
+.alert-success {
+    background-color: #4CAF50; /* Green background for success */
+    border: 1px solid #388E3C; /* Darker green border */
+}
+
+.alert-success a {
+    color: #fff; /* Ensuring any links in the success message are white */
+    text-decoration: underline;
+}
+
+
 @media (max-width: 1024px) {
   #form {
     width: 90%;
@@ -141,19 +163,22 @@ form .error {
   }
 }
 
+/* Center the register prompt */
 #register-prompt {
-    text-align: center;
-    margin-top: 20px;
-    font-size: 14px;
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Centers vertically */
+    margin-top: 20px; /* Adds space above the prompt */
 }
 
+/* Style for the registration link */
 #register-prompt a {
-    color: rgb(76, 194, 111);
-    text-decoration: none;
-    font-weight: bold;
+    color: #007BFF; /* Change the font color to blue */
+    text-decoration: none; /* Removes the underline */
+    font-size: 16px; /* Optional: Adjusts the font size */
 }
 
 #register-prompt a:hover {
-    text-decoration: underline;
+    color: #0056b3; /* Darker blue on hover */
+    text-decoration: underline; /* Adds underline on hover */
 }
-
