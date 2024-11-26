@@ -70,7 +70,7 @@ button {
 }
 
 button:hover {
-  background-color: rgb(60, 164, 90);
+  background-color: rgba(12, 73, 135, 1);
   transform: translateY(-2px);
 }
 
@@ -86,6 +86,7 @@ body .footer p {
     font-size: 10px;
     color: #333;
 }
+
 
 /* Validation error style */
 form .error {

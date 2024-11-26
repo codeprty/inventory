@@ -30,6 +30,11 @@
             </div>
         </c:if>
 
+          <!-- Displaying global errors -->
+        <div class="alert alert-error">
+            <form:errors path="*" cssClass="error" />
+        </div>
+
         <button type="submit" id="submit">Login</button>
     </form:form>
 

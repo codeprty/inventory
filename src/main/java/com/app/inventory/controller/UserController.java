@@ -71,7 +71,7 @@ public class UserController {
     public String loginUser(@ModelAttribute("user") User user, BindingResult result, Model model) {
         if (user.getUsername() == null || user.getUsername().trim().isEmpty() || user.getPassword() == null || user.getPassword().isEmpty()) {
             result.reject("login.error", "Invalid username or password!");
-            return "login";
+            return "login"; // BindingResult will carry the error to the view
         }
 
         boolean isAuthenticated = userService.authenticate(user.getUsername(), user.getPassword());
@@ -79,7 +79,7 @@ public class UserController {
             return "home"; // Redirect to home.jsp upon successful login
         } else {
             result.reject("login.error", "Invalid username or password!");
-            return "login"; // Stay on the login page with error message
+            return "login"; // Stay on the login page with the error
         }
     }
 }

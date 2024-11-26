@@ -18,6 +18,7 @@
                 <li><a href="${pageContext.request.contextPath}/home">Home</a></li>
                 <li><a href="${pageContext.request.contextPath}/items">All Items</a></li>
                 <li><a href="${pageContext.request.contextPath}/items/add">New Item</a></li>
+                <li><a href="${pageContext.request.contextPath}/items/maintenance">Maintenance</a></li>
             </ul>
         </nav>
     </div>

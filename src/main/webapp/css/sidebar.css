@@ -43,15 +43,21 @@ body {
 }
 
 #sidebar ul li a {
-  text-decoration: none;
-  color: white;
-  font-size: 18px;
-  display: block;
+    padding: 10px 15px; /* Default padding */
+    font-size: 18px;
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    border-bottom: 1px solid #ccc;
+    background-color: transparent; /* Ensure no background color by default */
 }
 
 #sidebar ul li a:hover {
-  background-color: rgba(0, 50, 100, 0.7);
+    background-color: rgba(0, 50, 100, 0.7); /* Background color on hover */
+    padding: 10px 15px; /* Same padding on hover to avoid any transition effect */
 }
+
+
 
 /* Square Hamburger Button */
 #toggle-btn {

@@ -75,48 +75,70 @@ button:hover {
 }
 
 body .footer {
-    font-size: 10px;
-    text-align: center;
-    margin-top: auto;
-    margin-bottom: 6px;
+  font-size: 10px;
+  text-align: center;
+  margin-top: auto;
+  margin-bottom: 6px;
 }
 
 body .footer p {
-    margin: 0;
-    font-size: 10px;
-    color: #333;
+  margin: 0;
+  font-size: 10px;
+  color: #333;
 }
 
+/* Parent container for the messages */
+.alert, form .error {
+    display: block;
+    width: fit-content; /* Makes the element take only as much space as the text */
+    margin: 0 auto; /* Centers the message horizontally */
+    text-align: center; /* Centers the text inside the element */
+}
+
+/* Validation error style */
 form .error {
-  color: white;
-  background-color: rgba(255, 0, 0, 0.8);
-  font-size: 12px;
-  font-weight: bold;
-  padding: 4px;
-  border-radius: 5px;
-}
-
-/* Styles for the success message */
-.alert {
-    padding: 15px;
-    margin: 10px 0;
-    border-radius: 5px;
-    font-size: 14px; /* Reduced font size */
+    color: white;
+    background-color: rgba(255, 0, 0, 0.8);  /* Red background */
+    font-size: 12px;
     font-weight: bold;
-    color: #fff; /* White text color for better contrast */
-    text-align: center;
+    padding: 4px;
+    border-radius: 5px;
+    display: inline-block;  /* Ensures background wraps around text */
+    margin: 0 auto;  /* Centers the message horizontally */
 }
 
+/* Success message style */
 .alert-success {
-    background-color: #4CAF50; /* Green background for success */
-    border: 1px solid #388E3C; /* Darker green border */
+    color: white;
+    background-color: rgba(76, 175, 80, 0.8); /* Green background for success */
+    font-size: 12px;
+    font-weight: bold;
+    padding: 4px;
+    border-radius: 5px;
+    margin: 0 auto;  /* Centers the message horizontally */
+    text-align: center; /* Ensures text is centered */
+    width: fit-content; /* Makes the element take only as much space as the text */
 }
 
-.alert-success a {
-    color: #fff; /* Ensuring any links in the success message are white */
-    text-decoration: underline;
+/* Center the register prompt */
+#register-prompt {
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Centers vertically */
+    margin-top: 20px; /* Adds space above the prompt */
 }
 
+/* Style for the registration link */
+#register-prompt a {
+    color: #007BFF; /* Change the font color to blue */
+    text-decoration: none; /* Removes the underline */
+    font-size: 16px; /* Optional: Adjusts the font size */
+}
+
+#register-prompt a:hover {
+    color: #0056b3; /* Darker blue on hover */
+    text-decoration: underline; /* Adds underline on hover */
+}
 
 @media (max-width: 1024px) {
   #form {
@@ -161,24 +183,4 @@ form .error {
   button {
     font-size: 14px;
   }
-}
-
-/* Center the register prompt */
-#register-prompt {
-    display: flex;
-    justify-content: center; /* Centers horizontally */
-    align-items: center; /* Centers vertically */
-    margin-top: 20px; /* Adds space above the prompt */
-}
-
-/* Style for the registration link */
-#register-prompt a {
-    color: #007BFF; /* Change the font color to blue */
-    text-decoration: none; /* Removes the underline */
-    font-size: 16px; /* Optional: Adjusts the font size */
-}
-
-#register-prompt a:hover {
-    color: #0056b3; /* Darker blue on hover */
-    text-decoration: underline; /* Adds underline on hover */
 }
