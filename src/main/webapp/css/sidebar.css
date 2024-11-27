@@ -57,7 +57,10 @@ body {
     padding: 10px 15px; /* Same padding on hover to avoid any transition effect */
 }
 
-
+/* Ensure Logout is pushed to the bottom */
+#sidebar ul li.logout-item {
+  margin-top: auto;  /* Pushes the logout item to the bottom */
+}
 
 /* Square Hamburger Button */
 #toggle-btn {
