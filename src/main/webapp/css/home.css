@@ -1,108 +1,99 @@
 @charset "UTF-8";
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+
+@import
+	url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap')
+	;
 
 body {
-  width: 100%;
-  height: 100vh;
-  margin: 0;
-  font-family: 'Roboto', sans-serif;
-  background-color: #f2f2e6; /* Consistent background color */
-  overflow-x: auto; /* Enable horizontal scrolling if content overflows */
-  overflow-y: auto; /* Enable vertical scrolling if content overflows */
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+	width: 100%;
+	height: 100vh;
+	margin: 0;
+	font-family: 'Roboto', sans-serif;
+	background-color: #f2f2e6;
+	overflow-x: auto;
+	overflow-y: auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 }
 
-/* Container for the content */
 .container {
-  padding: 20px;
-  width: 100%; 
-  max-width: 900px; 
-  margin: 0 auto;
-  overflow-y: auto;
-  box-sizing: border-box;
-
+	padding: 20px;
+	width: 100%;
+	max-width: 900px;
+	margin: 0 auto;
+	overflow-y: auto;
+	box-sizing: border-box;
 }
 
-/* Heading styles */
 h1 {
-  font-size: 36px;
-  color: rgba(12, 73, 135, 0.8);
-  text-align: center;
-  margin-bottom: 20px;
+	font-size: 36px;
+	color: rgba(12, 73, 135, 0.8);
+	text-align: center;
+	margin-bottom: 20px;
 }
 
-/* Paragraph and list styles */
 p {
-  font-size: 18px;
-  line-height: 1.6;
-  text-align: center;
+	font-size: 18px;
+	line-height: 1.6;
+	text-align: center;
 }
 
 ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+	list-style: none;
+	padding: 0;
+	margin: 0;
 }
 
 ul li {
-  font-size: 18px;
-  text-align: center;
-  margin-bottom: 10px;
+	font-size: 18px;
+	text-align: center;
+	margin-bottom: 10px;
 }
 
 body .footer {
-    font-size: 10px;
-    /* Other footer styles you may need */
-    transform: none; /* Reset any transform */
-    text-align: center;
-    margin-top: auto;
-    margin-bottom: 3px;
+	font-size: 10px;
+	transform: none;
+	text-align: center;
+	margin-top: auto;
+	margin-bottom: 3px;
 }
 
 body .footer p {
-    margin: 0; /* Reset any margin applied to the paragraph */
-    font-size: 10px; /* Apply font-size specifically to <p> */
-    color: #333; /* Example text color */
+	margin: 0;
+	font-size: 10px;
+	color: #333;
 }
 
-/* Standard responsive design for smaller screens */
-@media (max-width: 1024px) {
-  .container {
-    margin-left: 0; /* Ensure no left margin */
-    padding: 15px;
-    max-width: 100%; /* Ensure no overflow */
-  }
-
-  h1 {
-    font-size: 28px;
-  }
-
-  p, ul li {
-    font-size: 16px;
-  }
+@media ( max-width : 1024px) {
+	.container {
+		margin-left: 0;
+		padding: 15px;
+		max-width: 100%;
+	}
+	h1 {
+		font-size: 28px;
+	}
+	p, ul li {
+		font-size: 16px;
+	}
 }
 
-/* Mobile view adjustments (up to 768px) */
-@media (max-width: 768px) {
-  body {
-    margin-left: 0; /* Remove left margin on mobile */
-    padding: 0; /* Ensure no padding */
-  }
-
-  .container {
-    margin-left: 0;
-    padding: 10px;
-    max-width: 100%; /* Ensure full width */
-    margin-top: 60px; /* Adjust for navbar */
-  }
-
-  h1 {
-    font-size: 24px;
-  }
-
-  p, ul li {
-    font-size: 14px;
-  }
+@media ( max-width : 768px) {
+	body {
+		margin-left: 0;
+		padding: 0;
+	}
+	.container {
+		margin-left: 0;
+		padding: 10px;
+		max-width: 100%;
+		margin-top: 60px;
+	}
+	h1 {
+		font-size: 24px;
+	}
+	p, ul li {
+		font-size: 14px;
+	}
 }

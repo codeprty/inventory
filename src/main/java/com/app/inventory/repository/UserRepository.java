@@ -11,15 +11,15 @@ import java.util.Optional;
 @Repository
 public interface UserRepository extends JpaRepository<User, Long> {
 
-    // Check if a username already exists (Spring Data JPA provides this)
-    boolean existsByUsername(String username);
+	// Check if a username already exists (Spring Data JPA provides this)
+	boolean existsByUsername(String username);
 
-    // Search for users by a partial username match
-    List<User> findByUsernameContaining(String search);
+	// Search for users by a partial username match
+	List<User> findByUsernameContaining(String search);
 
-    // Find a user by their username (Spring Data JPA provides this)
-    Optional<User> findByUsername(String username);
+	// Find a user by their username (Spring Data JPA provides this)
+	Optional<User> findByUsername(String username);
 
-    // Count the total number of users (Spring Data JPA provides this as well)
-    long count();
+	// Count the total number of users (Spring Data JPA provides this as well)
+	long count();
 }

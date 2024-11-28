@@ -1,237 +1,215 @@
 @charset "UTF-8";
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+
+@import
+	url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap')
+	;
 
 body {
-  width: 100%;
-  height: 100vh;
-  margin: 0;
-  font-family: 'Roboto', sans-serif;
-  background-color: #f2f2e6; /* Consistent background color */
-  overflow-x: auto; /* Enable horizontal scrolling if content overflows */
-  overflow-y: auto; /* Enable vertical scrolling if content overflows */
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+	width: 100%;
+	height: 100vh;
+	margin: 0;
+	font-family: 'Roboto', sans-serif;
+	background-color: #f2f2e6;
+	overflow-x: auto;
+	overflow-y: auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 }
 
 #title {
-  text-align: center;
-  font-size: 30px;
-  color: rgba(12, 73, 135, 0.8);
-  margin-top: 20px;
-  margin-bottom: 15px;
+	text-align: center;
+	font-size: 30px;
+	color: rgba(12, 73, 135, 0.8);
+	margin-top: 20px;
+	margin-bottom: 15px;
 }
 
 #list-container {
-  width: auto;
-  max-width: 800px;
-  margin: 0 auto;
-  background-color: rgba(12, 73, 135, 0.6);
-  padding: 15px;
-  border-radius: 5px;
-  color: white;
-  text-align: center;
-  overflow-x: auto; /* Allow horizontal scrolling if content overflows */
+	width: auto;
+	max-width: 800px;
+	margin: 0 auto;
+	background-color: rgba(12, 73, 135, 0.6);
+	padding: 15px;
+	border-radius: 5px;
+	color: white;
+	text-align: center;
+	overflow-x: auto;
 }
 
 table {
-  width: 100%; /* Table occupies full width */
-  max-width: 800px; /* Matches the width of the container */
-  border-collapse: collapse;
-  font-size: 16px; /* Font size for clarity */
-  table-layout: fixed; /* Fixes column widths */
-  overflow-x: auto; /* Enable horizontal scrolling on table */
+	width: 100%;
+	max-width: 800px;
+	border-collapse: collapse;
+	font-size: 16px;
+	table-layout: fixed;
+	overflow-x: auto;
 }
 
-/* Adjust Column Widths */
-table th:nth-child(1), /* ID Column */
-table td:nth-child(1) {
-  width: 5%; /* ID column stays small */
+table th:nth-child(1), table td:nth-child(1) {
+	width: 5%;
 }
 
-table th:nth-child(2), /* Username Column */
-table td:nth-child(2) {
-  width: 40%; /* Adjusted width for Username column */
+table th:nth-child(2), table td:nth-child(2) {
+	width: 40%;
 }
 
-table th:nth-child(3), /* Role Column */
-table td:nth-child(3) {
-  width: 25%; /* Adjusted width for Role column */
-  text-align: center; /* Center-align role */
+table th:nth-child(3), table td:nth-child(3) {
+	width: 25%;
+	text-align: center;
 }
 
-/* Adjust Action Column Width (to match item list action column width) */
-table th:nth-child(4), /* Actions Column */
-table td:nth-child(4) {
-  width: 30%; /* Width for actions column */
-  text-align: center; /* Center-align buttons in the column */
+table th:nth-child(4), table td:nth-child(4) {
+	width: 30%;
+	text-align: center;
 }
 
 table th, table td {
-  padding: 10px 12px; /* Standard padding to match list table */
-  text-align: left;
-  border: 1px solid #ddd;
-  word-wrap: break-word; /* Allow text to wrap to the next line */
-  white-space: normal; /* Prevent text from staying on a single line */
-  vertical-align: top; /* Aligns text to the top */
+	padding: 10px 12px;
+	text-align: left;
+	border: 1px solid #ddd;
+	word-wrap: break-word;
+	white-space: normal;
+	vertical-align: top;
 }
 
 table th {
-  background-color: rgba(12, 73, 135, 0.8);
-  color: white;
-  font-weight: 400;
+	background-color: rgba(12, 73, 135, 0.8);
+	color: white;
+	font-weight: 400;
 }
 
 table tbody tr:hover {
-  background-color: rgba(12, 73, 135, 0.3);
-  cursor: pointer;
+	background-color: rgba(12, 73, 135, 0.3);
+	cursor: pointer;
 }
 
-/* Button Row Handling */
 .action-btn {
-  display: inline-block;
-  text-align: center;
-  text-decoration: none;
-  padding: 5px 10px;
-  border-radius: 5px;
-  font-size: 14px;
-  font-family: Roboto, sans-serif;
-  margin: 0 5px;
-  white-space: nowrap; /* Prevents buttons from wrapping */
+	display: inline-block;
+	text-align: center;
+	text-decoration: none;
+	padding: 5px 10px;
+	border-radius: 5px;
+	font-size: 14px;
+	font-family: Roboto, sans-serif;
+	margin: 0 5px;
+	white-space: nowrap;
 }
 
 #edit-btn {
-  background-color: rgb(76, 194, 111);
-  color: white;
+	background-color: rgb(76, 194, 111);
+	color: white;
 }
 
 #delete-btn {
-  background-color: rgb(194, 76, 76);
-  color: white;
+	background-color: rgb(194, 76, 76);
+	color: white;
 }
 
 .action-btn:hover {
-  opacity: 0.9;
-  cursor: pointer;
-  background-color: rgb(60, 164, 90);
-  transform: translateY(-2px);
+	opacity: 0.9;
+	cursor: pointer;
+	background-color: rgb(60, 164, 90);
+	transform: translateY(-2px);
 }
 
-/* Search Bar Styles */
 #search-form {
-  text-align: center;
-  margin-bottom: 20px;
+	text-align: center;
+	margin-bottom: 20px;
 }
 
 #search-bar {
-  padding: 8px;
-  width: 300px;
-  font-size: 14px;
-  border-radius: 5px;
-  border: 2px solid #ddd;
-  margin-right: 10px;
+	padding: 8px;
+	width: 300px;
+	font-size: 14px;
+	border-radius: 5px;
+	border: 2px solid #ddd;
+	margin-right: 10px;
 }
 
 #search-form button {
-  padding: 8px 15px;
-  font-size: 14px;
-  background-color: rgba(12, 73, 135, 0.8);
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  margin: 0 5px; /* Add space between buttons */
+	padding: 8px 15px;
+	font-size: 14px;
+	background-color: rgba(12, 73, 135, 0.8);
+	color: white;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	margin: 0 5px;
 }
 
 #search-form button:hover {
-  background-color: rgba(12, 73, 135, 1);
+	background-color: rgba(12, 73, 135, 1);
 }
 
-/* Search Button (Search) */
 #search-btn {
-  background-color: rgba(12, 73, 135, 0.8);
-  color: white;
+	background-color: rgba(12, 73, 135, 0.8);
+	color: white;
 }
 
 #search-btn:hover {
-  background-color: rgba(12, 73, 135, 1);
+	background-color: rgba(12, 73, 135, 1);
 }
 
-/* Clear Button */
 #clear-btn {
-  background-color: rgb(194, 76, 76); /* Red color for clear */
-  color: white;
-  border-radius: 5px;
+	background-color: rgb(194, 76, 76);
+	color: white;
+	border-radius: 5px;
 }
 
 #clear-btn:hover {
-  background-color: rgb(164, 60, 60); /* Darker red on hover */
+	background-color: rgb(164, 60, 60);
 }
 
 body .footer {
-    font-size: 10px;
-    /* Other footer styles you may need */
-    transform: none; /* Reset any transform */
-    text-align: center;
-    margin-top: auto;
-    margin-bottom: 6px;
+	font-size: 10px;
+	transform: none;
+	text-align: center;
+	margin-top: auto;
+	margin-bottom: 6px;
 }
 
 body .footer p {
-    margin: 0; /* Reset any margin applied to the paragraph */
-    font-size: 10px; /* Apply font-size specifically to <p> */
-    color: #333; /* Example text color */
+	margin: 0;
+	font-size: 10px;
+	color: #333;
 }
 
-/* Responsive Design for smaller screens */
-@media (max-width: 1024px) {
-  /* For tablets and smaller desktops */
-  #list-container {
-    padding: 10px;
-    max-width: 100%; /* Allow full width */
-  }
-
-  table th, table td {
-    font-size: 14px; /* Smaller font for better readability */
-  }
-
-  /* Adjust search bar width for small screens */
-  #search-bar {
-    width: 100%; /* Take full width on smaller screens */
-  }
+@media ( max-width : 1024px) {
+	#list-container {
+		padding: 10px;
+		max-width: 100%;
+	}
+	table th, table td {
+		font-size: 14px;
+	}
+	#search-bar {
+		width: 100%;
+	}
 }
 
-@media (max-width: 768px) {
-  /* Mobile devices */
-  #list-container {
-    padding: 10px;
-    max-width: 100%; /* Take full width */
-  }
-
-  table th, table td {
-    font-size: 12px; /* Smaller font for better readability */
-  }
-
-  /* Adjust search bar width for small screens */
-  #search-bar {
-    width: 80%; /* Slightly smaller width */
-  }
-
-  /* Make sure table is scrollable horizontally on small screens */
-  table {
-    overflow-x: auto;
-    display: block;
-    white-space: nowrap;
-  }
-
-  /* Buttons and search bar stack vertically on small screens */
-  #search-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  #search-bar {
-    margin-bottom: 10px; /* Space between search bar and buttons */
-  }
+@media ( max-width : 768px) {
+	#list-container {
+		padding: 10px;
+		max-width: 100%;
+	}
+	table th, table td {
+		font-size: 12px;
+	}
+	#search-bar {
+		width: 80%;
+	}
+	table {
+		overflow-x: auto;
+		display: block;
+		white-space: nowrap;
+	}
+	#search-form {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	#search-bar {
+		margin-bottom: 10px;
+	}
 }

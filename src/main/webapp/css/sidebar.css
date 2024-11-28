@@ -1,113 +1,108 @@
 @charset "UTF-8";
-/* Sidebar CSS */
+
 body {
-  font-family: 'Roboto', sans-serif;
-  margin: 0;
-  padding: 0;
+	font-family: 'Roboto', sans-serif;
+	margin: 0;
+	padding: 0;
 }
 
 #navbar {
-  display: flex;
-  justify-content: flex-start;
-  position: relative;
+	display: flex;
+	justify-content: flex-start;
+	position: relative;
 }
 
 #sidebar {
-  height: 100vh;
-  width: 250px;
-  background-color: rgba(12, 73, 135, 0.8);
-  position: fixed;
-  top: 0;
-  left: 0;
-  transform: translateX(-100%);
-  transition: transform 0.3s ease-in-out;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  padding-top: 80px; /* Added space between button and menu */
+	height: 100vh;
+	width: 250px;
+	background-color: rgba(12, 73, 135, 0.8);
+	position: fixed;
+	top: 0;
+	left: 0;
+	transform: translateX(-100%);
+	transition: transform 0.3s ease-in-out;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	padding-top: 80px;
 }
 
 #sidebar.active {
-  transform: translateX(0);
+	transform: translateX(0);
 }
 
 #sidebar ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+	list-style: none;
+	padding: 0;
+	margin: 0;
 }
 
 #sidebar ul li {
-  padding: 15px 20px;
-  text-align: left;
+	padding: 15px 20px;
+	text-align: left;
 }
 
 #sidebar ul li a {
-    padding: 10px 15px; /* Default padding */
-    font-size: 18px;
-    display: block;
-    color: #fff;
-    text-decoration: none;
-    border-bottom: 1px solid #ccc;
-    background-color: transparent; /* Ensure no background color by default */
+	padding: 10px 15px;
+	font-size: 18px;
+	display: block;
+	color: #fff;
+	text-decoration: none;
+	border-bottom: 1px solid #ccc;
+	background-color: transparent;
 }
 
 #sidebar ul li a:hover {
-    background-color: rgba(0, 50, 100, 0.7); /* Background color on hover */
-    padding: 10px 15px; /* Same padding on hover to avoid any transition effect */
+	background-color: rgba(0, 50, 100, 0.7);
+	padding: 10px 15px;
 }
 
-/* Ensure Logout is pushed to the bottom */
 #sidebar ul li.logout-item {
-  margin-top: auto;  /* Pushes the logout item to the bottom */
+	margin-top: auto;
 }
 
-/* Square Hamburger Button */
 #toggle-btn {
-  background-color: rgba(12, 73, 135, 0.8); /* Button background color */
-  border: none;
-  color: white;
-  font-size: 30px;
-  position: absolute;
-  top: 15px; /* Adjusted for correct position */
-  left: 15px; /* Adjusted for correct position */
-  cursor: pointer;
-  z-index: 1001; /* Ensure it stays above sidebar */
-  width: 40px; /* Square button size */
-  height: 40px; /* Square button size */
-  padding: 0;
-  border-radius: 5px; /* Rounded corners for button */
-  display: flex;
-  align-items: center;
-  justify-content: center;
+	background-color: rgba(12, 73, 135, 0.8);
+	border: none;
+	color: white;
+	font-size: 30px;
+	position: absolute;
+	top: 15px;
+	left: 15px;
+	cursor: pointer;
+	z-index: 1001;
+	width: 40px;
+	height: 40px;
+	padding: 0;
+	border-radius: 5px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 #toggle-btn span {
-  display: block;
-  width: 20px; /* Slightly thinner bars to fit within the square */
-  height: 3px; /* Bar thickness */
-  background-color: white; /* White color for better visibility */
-  border-radius: 5px;
-  margin: 4px 0; /* Spacing between the bars */
+	display: block;
+	width: 20px;
+	height: 3px;
+	background-color: white;
+	border-radius: 5px;
+	margin: 4px 0;
 }
 
-/* Hover Effect for Button */
 #toggle-btn:hover {
-  background-color: rgba(12, 73, 135, 1); /* Darker background on hover */
+	background-color: rgba(12, 73, 135, 1);
 }
 
-@media (max-width: 768px) {
-  #sidebar {
-    transform: translateX(-100%);
-  }
-
-  #sidebar.active {
-    transform: translateX(0);
-  }
-
-  #toggle-btn {
-    display: block;
-    background-color: rgba(12, 73, 135, 0.8);
-    color: white;
-  }
+@media ( max-width : 768px) {
+	#sidebar {
+		transform: translateX(-100%);
+	}
+	#sidebar.active {
+		transform: translateX(0);
+	}
+	#toggle-btn {
+		display: block;
+		background-color: rgba(12, 73, 135, 0.8);
+		color: white;
+	}
 }

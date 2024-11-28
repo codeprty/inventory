@@ -10,68 +10,68 @@ import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 
-import java.math.BigDecimal;  // Import BigDecimal
+import java.math.BigDecimal; // Import BigDecimal
 
 @Entity
 @Table(name = "item")
 public class Item {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
 
-    @NotBlank(message = "Name is required")
-    @Size(min = 3, message = "Name must be at least 3 characters.")
-    private String name;
+	@NotBlank(message = "Name is required")
+	@Size(min = 3, message = "Name must be at least 3 characters.")
+	private String name;
 
-    @NotNull(message = "Price is required.")
-    @Min(value = 1, message = "Price must be greater than 0.")
-    private BigDecimal price;
-    
-    private String description;
-    
-    @NotNull(message = "Quantity is required.")
-    @Min(value =1, message = "Quantity must be greater than 0.")
-    private Integer quantity;
+	@NotNull(message = "Price is required.")
+	@Min(value = 1, message = "Price must be greater than 0.")
+	private BigDecimal price;
 
-    // Getters and Setters
-    public Long getId() {
-        return id;
-    }
+	private String description;
 
-    public void setId(Long id) {
-        this.id = id;
-    }
+	@NotNull(message = "Quantity is required.")
+	@Min(value = 1, message = "Quantity must be greater than 0.")
+	private Integer quantity;
 
-    public String getName() {
-        return name;
-    }
+	// Getters and Setters
+	public Long getId() {
+		return id;
+	}
 
-    public void setName(String name) {
-        this.name = name;
-    }
+	public void setId(Long id) {
+		this.id = id;
+	}
 
-    public BigDecimal getPrice() {
-        return price;
-    }
+	public String getName() {
+		return name;
+	}
 
-    public void setPrice(BigDecimal price) {
-        this.price = price;
-    }
+	public void setName(String name) {
+		this.name = name;
+	}
 
-    public String getDescription() {
-        return description;
-    }
+	public BigDecimal getPrice() {
+		return price;
+	}
 
-    public void setDescription(String description) {
-        this.description = description;
-    }
+	public void setPrice(BigDecimal price) {
+		this.price = price;
+	}
 
-    public Integer getQuantity() {
-        return quantity;
-    }
+	public String getDescription() {
+		return description;
+	}
 
-    public void setQuantity(Integer quantity) {
-        this.quantity = quantity;
-    }
+	public void setDescription(String description) {
+		this.description = description;
+	}
+
+	public Integer getQuantity() {
+		return quantity;
+	}
+
+	public void setQuantity(Integer quantity) {
+		this.quantity = quantity;
+	}
 }

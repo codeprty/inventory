@@ -7,30 +7,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="/css/register.css">
+    <link rel="stylesheet" type="text/css" href="/css/register.css"> <!-- Linking external stylesheet -->
     <title>Register</title>
 </head>
 <body>
     <h1 id="title">Register</h1>
     
-    <!-- Display success message -->
+    <!-- Success message displayed if there's any -->
     <c:if test="${not empty message}">
         <div class="success-message">
-            ${message}
+            ${message} <!-- Display message passed from controller -->
         </div>
     </c:if>
 
-    <!-- Registration Form -->
+    <!-- Registration form to capture user details -->
     <form:form action="/register" method="post" id="form" modelAttribute="user">
+        
         <label for="username">Username</label>
         <form:input type="text" path="username" id="username" placeholder="Type your username here" required="true"/>
-        <form:errors path="username" cssClass="error" />
+        <form:errors path="username" cssClass="error" /> <!-- Display username validation errors -->
 
         <label for="password">Password</label>
         <form:input type="password" path="password" id="password" placeholder="Type your password here" required="true"/>
-        <form:errors path="password" cssClass="error" />
+        <form:errors path="password" cssClass="error" /> <!-- Display password validation errors -->
 
-        <button type="submit" id="submit">Register</button>
+        <button type="submit" id="submit">Register</button> <!-- Register button -->
+
     </form:form>
 
     <footer class="footer">

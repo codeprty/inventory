@@ -1,155 +1,199 @@
 @charset "UTF-8";
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
 
+@import
+	url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap')
+	;
+
+/* Body Styling */
 body {
-  width: 100%;
-  height: 100vh;
-  margin: 0;
-  font-family: 'Roboto', sans-serif;
-  background-color: #f2f2e6; /* Consistent background color */
-  overflow-x: auto; /* Enable horizontal scrolling if content overflows */
-  overflow-y: auto; /* Enable vertical scrolling if content overflows */
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+	width: 100%;
+	height: 100vh;
+	margin: 0;
+	font-family: 'Roboto', sans-serif;
+	background-color: #f2f2e6;
+	overflow-x: auto;
+	overflow-y: auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 }
 
+/* Title Styling */
 #title {
-  text-align: center;
-  font-size: 30px;
-  color: rgba(12, 73, 135, 0.8);
-  margin-top: 20px;
-  margin-bottom: 15px;
+	text-align: center;
+	font-size: 30px;
+	color: rgba(12, 73, 135, 0.8);
+	margin-top: 20px;
+	margin-bottom: 15px;
 }
 
+/* Form Styling */
 #form {
-  width: 80%;
-  max-width: 400px;
-  min-width: 300px;
-  margin: 0 auto;
-  padding: 20px 30px;
-  background-color: rgba(12, 73, 135, 0.6);
-  border-radius: 5px;
-  color: white;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+	width: 80%;
+	max-width: 400px;
+	min-width: 300px;
+	margin: 0 auto;
+	padding: 20px 30px;
+	background-color: rgba(12, 73, 135, 0.6);
+	border-radius: 5px;
+	color: white;
+	box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
+/* Label Styling */
 label {
-  display: block;
-  margin: 10px 0 5px 0;
-  font-size: 16px;
-  color: white;
+	display: block;
+	margin: 10px 0 5px 0;
+	font-size: 16px;
+	color: white;
 }
 
-input[type="text"],
-input[type="number"],
-textarea {
-  width: 100%;
-  padding: 10px;
-  font-size: 16px;
-  font-family: Roboto, sans-serif;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  box-sizing: border-box;
-  margin-bottom: 15px;
+/* Styling for input fields and other form elements */
+input[type="text"], input[type="number"], input[type="password"], select,
+	textarea {
+	width: 100%;
+	padding: 10px;
+	font-size: 16px;
+	font-family: Roboto, sans-serif;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	box-sizing: border-box;
+	margin-bottom: 15px;
 }
 
-textarea {
-  resize: none;
-  height: 70px;
+/* Dropdown Styling */
+select {
+	appearance: none;
+	background-color: white;
+	background-image:
+		url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 6"%3E%3Cpath fill="gray" d="M0 0l5 6 5-6z"/%3E%3C/svg%3E');
+	background-repeat: no-repeat;
+	background-position: right 10px center;
+	background-size: 10px 6px;
+	cursor: pointer;
+	padding-right: 30px;
 }
 
+/* Submit Button Styling */
 #submit {
-  display: block;
-  margin: 20px auto 0 auto;
-  height: 40px;
-  width: 100%;
-  background-color: rgb(76, 194, 111);
-  color: white;
-  font-size: 16px;
-  font-family: Roboto, sans-serif;
-  border: none;
-  border-radius: 5px;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  cursor: pointer;
-  transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+	display: block;
+	margin: 20px auto 0 auto;
+	height: 40px;
+	width: 100%;
+	background-color: rgb(76, 194, 111);
+	color: white;
+	font-size: 16px;
+	font-family: Roboto, sans-serif;
+	border: none;
+	border-radius: 5px;
+	box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+	cursor: pointer;
+	transition: background-color 0.3s ease-in-out, transform 0.2s
+		ease-in-out;
 }
 
 #submit:hover {
-  background-color: rgb(60, 164, 90);
-  transform: translateY(-2px);
+	background-color: rgb(60, 164, 90);
+	transform: translateY(-2px);
 }
 
+/* Disabled Input Field Styling */
+.readonly-input {
+	background-color: #e0e0e0;
+	color: #9e9e9e;
+	border: 1px solid #ccc;
+	cursor: not-allowed;
+}
+
+.readonly-input::placeholder {
+	color: #9e9e9e;
+}
+
+/* Footer Styling */
 body .footer {
-    font-size: 10px;
-    /* Other footer styles you may need */
-    transform: none; /* Reset any transform */
-    text-align: center;
-    margin-top: auto;
-    margin-bottom: 6px;
+	font-size: 10px;
+	transform: none;
+	text-align: center;
+	margin-top: auto;
+	margin-bottom: 6px;
 }
 
 body .footer p {
-    margin: 0; /* Reset any margin applied to the paragraph */
-    font-size: 10px; /* Apply font-size specifically to <p> */
-    color: #333; /* Example text color */
+	margin: 0;
+	font-size: 10px;
+	color: #333;
 }
 
+/* Error Message Styling */
 form .error {
-	color: white; /* Change text color to white for better contrast */
-  	background-color: rgba(255, 0, 0, 0.8); /* Add a red background with some transparency */
-  	font-size: 12px;
-  	font-weight: bold;
-  	padding: 4px;
-  	border-radius: 5px; /* Round the corners for a cleaner look */
+	color: white;
+	background-color: rgba(255, 0, 0, 0.8);
+	font-size: 12px;
+	font-weight: bold;
+	padding: 4px;
+	border-radius: 5px;
 }
 
-/* Standard responsive design for smaller screen sizes */
-@media (max-width: 1024px) {
-  /* For tablets and smaller desktops */
-  #form {
-    width: 90%;
-    padding: 15px 20px;
-  }
-
-  #title {
-    font-size: 28px; /* Adjust title size */
-  }
-
-  input[type="text"],
-  input[type="number"],
-  textarea {
-    font-size: 14px; /* Adjust input font size */
-  }
-
-  #submit {
-    font-size: 14px; /* Adjust button size */
-  }
+/* Reset Password Button Styling */
+#resetPasswordBtn {
+	display: block;
+	margin: 20px auto 0 auto;
+	height: 40px;
+	width: 100%;
+	background-color: rgb(244, 67, 54);
+	color: white;
+	font-size: 16px;
+	font-family: Roboto, sans-serif;
+	border: none;
+	border-radius: 5px;
+	box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+	cursor: pointer;
+	transition: background-color 0.3s ease-in-out, transform 0.2s
+		ease-in-out;
 }
 
-/* Mobile view adjustments (up to 768px) */
-@media (max-width: 768px) {
-  body {
-    margin-left: 0; /* Remove left margin on mobile */
-    padding: 0; /* Ensure no padding */
-  }
+#resetPasswordBtn:hover {
+	background-color: rgb(229, 57, 53);
+	transform: translateY(-2px);
+}
 
-  #form {
-    width: 90%; /* Take up more width on small screens */
-    padding: 10px 15px; /* Reduce padding */
-  }
+/* Responsive Design */
+@media ( max-width : 1024px) {
+	#form {
+		width: 90%;
+		padding: 15px 20px;
+	}
+	#title {
+		font-size: 28px;
+	}
+	input[type="text"], input[type="number"], textarea {
+		font-size: 14px;
+	}
+	#submit {
+		font-size: 14px;
+	}
+}
 
-  #title {
-    font-size: 22px; /* Smaller title font size */
-  }
-
-  input[type="text"],
-  input[type="number"],
-  textarea {
-    font-size: 14px; /* Reduce font size */
-  }
-
-  #submit {
-    font-size: 14px; /* Keep the submit button readable */
-  }
+/* Mobile View Adjustments */
+@media ( max-width : 768px) {
+	body {
+		margin-left: 0;
+		padding: 0;
+	}
+	#form {
+		width: 90%;
+		padding: 10px 15px;
+	}
+	#title {
+		font-size: 24px;
+	}
+	input[type="text"], input[type="number"], textarea {
+		font-size: 12px;
+	}
+	#submit {
+		font-size: 14px;
+	}
+	#resetPasswordBtn {
+		font-size: 14px;
+	}
 }
